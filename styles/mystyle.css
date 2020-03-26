@@ -1,0 +1,177 @@
+
+.clock {
+  position: absolute;
+  top: 35vh;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  /* transform: translateX(-50%) translateY(-50%); */
+  color: #fff;
+  font-size: 13vw;
+  letter-spacing: 7px;
+  font-weight: 500;
+  z-index: 2;
+/*  box-shadow: 0px 0px 10px 2px #ccc;*/
+}
+#myClock {
+  width: 75%;
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; 
+}
+
+.bg1 {
+  grid-area: section;
+
+  /* The image used */
+  background-image: url("../img/web-dag.jpg");
+
+  /* Full height */
+  height: 100vh; 
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg2 {
+  grid-area: section;
+
+  /* The image used */
+  background-image: url("../img/web-avond.jpg");
+
+  /* Full height */
+  height: 100vh; 
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gridcontainer {
+display: grid;
+grid-template-rows: 100vh;
+grid-template-columns: 100%;
+grid-template-areas:
+"section";
+
+}
+
+#raket-1{
+  position: absolute;
+  left: -10%;
+  bottom:10%;
+  width: 200px;
+  z-index: 1;
+  overflow: hidden;
+  animation: vlieg 10s /*infinite*/ ease-in;
+}
+
+@keyframes vlieg{
+ from{
+  transform: translate(0px,0px);
+ }
+ to{
+  transform: translate(500%,-500%);
+ }
+}
+
+#ufo{
+  position: absolute;
+  left: 50%;
+  bottom: 80%;
+  width: 80px;
+  z-index: 1;
+  overflow: hidden;
+  animation: sweef 3s infinite ease-in;
+}
+
+@keyframes sweef{
+ from{
+  transform: translate(0px,0px);
+ }
+ 50%{
+  transform: translate(-20%,-20%);
+ }
+ to{
+  transform: translate(0px,0px);
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .clock {
+  position: absolute;
+  top: 48vh;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 17vw;
+  letter-spacing: 2px;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 2px #1C80C3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+ .clock {
+  position: absolute;
+  top: 45vh;
+  left: -55px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 20vw;
+  letter-spacing: 2px;
+  font-weight: 550;
+  z-index: 2;
+ /* box-shadow: 0px 0px 10px 2px #1C80C3;*/
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+ .clock {
+  position: absolute;
+  top: 40vh;
+  left: -25px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 15vw;
+  letter-spacing: 2px;
+  font-weight: 550;
+  z-index: 2;
+ /* box-shadow: 0px 0px 10px 2px #1C80C3;*/
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+ .clock {
+  position: absolute;
+  top: 45vh;
+  left: -25px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 10vw;
+  letter-spacing: 10px;
+  font-weight: 550;
+  z-index: 2;
+/*  box-shadow: 0px 0px 10px 2px #1C80C3;*/
+  }
+}
